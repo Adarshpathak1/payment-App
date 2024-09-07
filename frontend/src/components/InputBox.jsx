@@ -1,11 +1,11 @@
-const InputBox = ({ label, placeholder }) => {
+const InputBox = ({ label, placeholder, onChange }) => {
   return (
     <div className="text-sm font-medium text-left py-2">
       <label className="text-sm font-medium text-left py-2" htmlFor="input">
         {label}
       </label>
       <input
-        type="text"
+        onChange={onChange}
         placeholder={placeholder}
         className="w-full px-2 py-1 border rounded border-slate-200"
       />

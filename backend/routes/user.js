@@ -6,7 +6,7 @@ const { User, Account } = require("../db");
 const { authMiddleware } = require("../middleware");
 const router = express.Router();
 
-const signupSchema = Zod.object({
+const signupSchema = zod.object({
   userName: zod.string(),
   password: zod.string(),
   firstName: zod.string(),

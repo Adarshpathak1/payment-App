@@ -1,6 +1,8 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
-mongoose.connect("mongodb://localhost:27017/paytm");
+mongoose.connect("mongodb://127.0.0.1:27017/paytm", {
+  serverSelectionTimeoutMS: 30000,
+});
 
 const userSchema = new Schema({
   username: String,
